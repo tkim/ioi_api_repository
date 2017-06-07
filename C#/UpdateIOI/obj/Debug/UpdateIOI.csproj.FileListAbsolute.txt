@@ -1,0 +1,8 @@
+C:\Development\IOIAPI Samples\C#\UpdateIOI\bin\Debug\UpdateIOI.exe.config
+C:\Development\IOIAPI Samples\C#\UpdateIOI\bin\Debug\UpdateIOI.exe
+C:\Development\IOIAPI Samples\C#\UpdateIOI\bin\Debug\UpdateIOI.pdb
+C:\Development\IOIAPI Samples\C#\UpdateIOI\bin\Debug\Bloomberglp.Blpapi.dll
+C:\Development\IOIAPI Samples\C#\UpdateIOI\bin\Debug\Bloomberglp.Blpapi.xml
+C:\Development\IOIAPI Samples\C#\UpdateIOI\obj\Debug\UpdateIOI.csprojResolveAssemblyReference.cache
+C:\Development\IOIAPI Samples\C#\UpdateIOI\obj\Debug\UpdateIOI.exe
+C:\Development\IOIAPI Samples\C#\UpdateIOI\obj\Debug\UpdateIOI.pdb

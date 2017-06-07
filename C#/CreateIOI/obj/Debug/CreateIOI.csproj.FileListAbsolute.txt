@@ -1,0 +1,8 @@
+C:\Development\IOIAPI Samples\C#\CreateIOI\bin\Debug\CreateIOI.exe.config
+C:\Development\IOIAPI Samples\C#\CreateIOI\bin\Debug\CreateIOI.exe
+C:\Development\IOIAPI Samples\C#\CreateIOI\bin\Debug\CreateIOI.pdb
+C:\Development\IOIAPI Samples\C#\CreateIOI\bin\Debug\Bloomberglp.Blpapi.dll
+C:\Development\IOIAPI Samples\C#\CreateIOI\bin\Debug\Bloomberglp.Blpapi.xml
+C:\Development\IOIAPI Samples\C#\CreateIOI\obj\Debug\CreateIOI.csprojResolveAssemblyReference.cache
+C:\Development\IOIAPI Samples\C#\CreateIOI\obj\Debug\CreateIOI.exe
+C:\Development\IOIAPI Samples\C#\CreateIOI\obj\Debug\CreateIOI.pdb

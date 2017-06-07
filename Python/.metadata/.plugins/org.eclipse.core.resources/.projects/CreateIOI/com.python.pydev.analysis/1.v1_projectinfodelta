@@ -1,0 +1,22 @@
+INSTUPCreateIOI
+C:\Development\IOIAPI Samples\Python\CreateIOI\CreateIOI.py
+INFOS:&&3|1|2|0&&3|3|2|0&&3|4|2|0&&3|5|2|0&&3|6|2|0&&3|7|2|0&&3|8|2|0&&3|9|2|0&&1|10|2|0&&2|11|2|10&&2|12|2|10&&2|13|2|10&&3|14|2|15&&2|16|2|10&&2|17|2|10&&2|18|2|0&&3|19|2|0
+processServiceStatusEvent=13
+__copyright__=19
+processSessionStatusEvent=12
+SESSION_STARTED=1
+processEvent=11
+SessionEventHandler.processServiceStatusEvent=15
+main=18
+processResponseEvent=16
+d_port=8
+d_host=7
+d_service=6
+bEnd=9
+SESSION_STARTUP_FAILURE=3
+SERVICE_OPENED=4
+SessionEventHandler=10
+requestID=14
+processMiscEvents=17
+CreateIOI=2
+SERVICE_OPEN_FAILURE=5

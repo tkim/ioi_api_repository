@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1496756886175_1" label="IOISamples" name="IOISamples">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CreateIOI" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/UpdateIOI" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CancelIOI" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1496756848847_0" label="Window Working Set" name="Aggregate for window 1496756848847"/>
+<mruList name="IOISamples"/>
+</workingSetManager>

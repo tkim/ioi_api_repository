@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.bloomberg.ioi.samples.CancelIOI&apos; to &apos;ConvertIOIToAdvert&apos;&#x0D;&#x0A;- Original project: &apos;ConvertIOIToAdvert&apos;&#x0D;&#x0A;- Original element: &apos;com.bloomberg.ioi.samples.CancelIOI&apos;&#x0D;&#x0A;- Renamed element: &apos;com.bloomberg.ioi.samples.ConvertIOIToAdvert&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CancelIOI&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.bloomberg.ioi.samples{CancelIOI.java[CancelIOI" matchStrategy="1" name="ConvertIOIToAdvert" qualified="false" references="true" similarDeclarations="false" stamp="1496744739001" textual="false" version="1.0"/>
+</session>
