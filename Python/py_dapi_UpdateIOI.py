@@ -22,7 +22,7 @@ bEnd=False
 
 class SessionEventHandler():
     
-    def sendCreateIOI(self, session):
+    def sendUpdateIOI(self, session):
 
         service = session.getService(d_ioi)
         request = service.createRequest("updateIoi")
@@ -130,7 +130,7 @@ class SessionEventHandler():
             if msg.messageType() == SERVICE_OPENED:
                 
                 print("IOIAPI service opened... Sending request...")
-                self.sendCreateIOI(session)
+                self.sendUpdateIOI(session)
                 
             elif msg.messageType() == SERVICE_OPEN_FAILURE:
                     print("Error: Service Failed to open")
