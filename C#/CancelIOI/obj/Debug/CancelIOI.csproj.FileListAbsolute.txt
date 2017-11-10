@@ -1,7 +1,0 @@
-C:\Development\IOIAPI Samples\C#\CancelIOI\bin\Debug\CancelIOI.exe.config
-C:\Development\IOIAPI Samples\C#\CancelIOI\bin\Debug\CancelIOI.exe
-C:\Development\IOIAPI Samples\C#\CancelIOI\bin\Debug\CancelIOI.pdb
-C:\Development\IOIAPI Samples\C#\CancelIOI\bin\Debug\Bloomberglp.Blpapi.dll
-C:\Development\IOIAPI Samples\C#\CancelIOI\bin\Debug\Bloomberglp.Blpapi.xml
-C:\Development\IOIAPI Samples\C#\CancelIOI\obj\Debug\CancelIOI.exe
-C:\Development\IOIAPI Samples\C#\CancelIOI\obj\Debug\CancelIOI.pdb
