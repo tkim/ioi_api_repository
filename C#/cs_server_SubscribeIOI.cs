@@ -100,8 +100,8 @@ namespace com.bloomberg.ioi.samples
             d_port = 8294;
 
             d_auth = "//blp/apiauth";
-            d_user = "CORP\\rclegg2";
-            d_ip = "10.136.8.125";
+            d_user = "my EMRS ID"; // EMRS ID of the server
+            d_ip = "0.0.0.0"; // IP address of the server
 
         }
 
