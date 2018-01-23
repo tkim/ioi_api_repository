@@ -1,4 +1,4 @@
-# py_dapi_CreateIOI.py
+# py_dapi_CreateEquityIOI.py
 
 import sys
 import blpapi

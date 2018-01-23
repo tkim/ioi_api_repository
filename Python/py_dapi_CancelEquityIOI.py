@@ -1,4 +1,4 @@
-# py_dapi_CancelIOI.py
+# py_dapi_CancelEquityIOI.py
 
 import sys
 import blpapi
