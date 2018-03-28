@@ -21,7 +21,7 @@ SUBSCRIPTION_TERMINATED         = blpapi.Name("SubscriptionTerminated")
 IOI_DATA                        = blpapi.Name("Ioidata")
 
 
-d_ioi = "//blp-test/ioisub-beta"
+d_ioi = "//blp/ioisub-beta"
 d_host = "localhost"
 d_port = 8194
 ioiSubscriptionID=blpapi.CorrelationId(1)
@@ -40,13 +40,15 @@ class SessionEventHandler():
         
         subscriptions.add(topic=ioiTopic,correlationId=ioiSubscriptionID)
 
-        print("Sending subscription...")
+        print("Sending subscription: " + ioiTopic)
+        
         session.subscribe(subscriptions)
 
     def processAdminEvent(self,event):  
         print("Processing ADMIN event")
 
         for msg in event:
+            print(msg)
             if msg.messageType() == SLOW_CONSUMER_WARNING:
                 print("Warning: Entered Slow Consumer status")
                 
@@ -54,13 +56,16 @@ class SessionEventHandler():
                 sys.stderr.write("Slow consumer status cleared")
                 
             else:
-                print(msg)
+                print("ADMIN MESSAGE: %s" % (msg))
 
 
     def processSessionStatusEvent(self,event,session):  
         print("Processing SESSION_STATUS event")
 
         for msg in event:
+            
+            print(msg)
+            
             if msg.messageType() == SESSION_STARTED:
                 print("Session started...")
                 session.openServiceAsync(d_ioi)
@@ -83,6 +88,8 @@ class SessionEventHandler():
         
         for msg in event:
             
+            print(msg)
+
             if msg.messageType() == SERVICE_OPENED:
                 
                 print("IOIAPI service opened... Sending request...")
@@ -98,6 +105,8 @@ class SessionEventHandler():
         
         for msg in event:
             
+            print("SUBSCRIPTION_STATUS MESSAGE: %s" % (msg))
+
             if msg.messageType() == SUBSCRIPTION_STARTED:
                 print("IOIAPI subscription started...")
                 
@@ -112,7 +121,7 @@ class SessionEventHandler():
         
         for msg in event:
             
-            #print (msg)
+            print (msg)
             
             if msg.messageType() == IOI_DATA:
 
@@ -407,7 +416,6 @@ if __name__ == "__main__":
 
 __copyright__ = """
 Copyright 2017. Bloomberg Finance L.P.
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
 deal in the Software without restriction, including without limitation the
@@ -416,7 +424,6 @@ sell copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:  The above
 copyright notice and this permission notice shall be included in all copies
 or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
