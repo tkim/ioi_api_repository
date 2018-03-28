@@ -60,7 +60,6 @@ namespace com.bloomberg.ioi.samples
         private static readonly Name SUBSCRIPTION_TERMINATED = new Name("SubscriptionTerminated");
 
         private Subscription ioiSubscription;
-        private CorrelationID ioiSubscriptionID;
 
         private String d_service;
         private String d_host;
@@ -85,7 +84,7 @@ namespace com.bloomberg.ioi.samples
             // and the values to be used by the SessionOptions object
             // to identify IP/port of the back-end process.
 
-            d_service = "//blp-test/ioisub-beta";
+            d_service = "//blp/ioisub-beta";
             d_host = "localhost";
             d_port = 8194;
 
@@ -214,10 +213,7 @@ namespace com.bloomberg.ioi.samples
 
                 if (msg.MessageType.Equals(SUBSCRIPTION_STARTED))
                 {
-                    if (msg.CorrelationID == ioiSubscriptionID)
-                    {
-                        System.Console.WriteLine("IOI subscription started successfully");
-                    }
+                    System.Console.WriteLine("IOI subscription started successfully");
                 }
                 else if (msg.MessageType.Equals(SUBSCRIPTION_FAILURE))
                 {
@@ -354,8 +350,9 @@ namespace com.bloomberg.ioi.samples
 
                     String change = msg.HasElement("change") ? msg.GetElementAsString("change") : "";
 
-                    System.Console.WriteLine("IOI MESSAGE: CorrelationID(" + msg.CorrelationID + ")");
+                    System.Console.WriteLine("IOI MESSAGE: ");
 
+                    System.Console.WriteLine("change: " + change);
                     System.Console.WriteLine("ioi_instrument_type: " + ioi_instrument_type);
                     System.Console.WriteLine("ioi_instrument_option_legs_count: " + ioi_instrument_option_legs_count);
                     System.Console.WriteLine("ioi_instrument_option_legs_0_strike: " + ioi_instrument_option_legs_0_strike);
@@ -454,7 +451,6 @@ namespace com.bloomberg.ioi.samples
                     System.Console.WriteLine("ioi_routing_customId: " + ioi_routing_customId);
                     System.Console.WriteLine("ioi_routing_broker: " + ioi_routing_broker);
                     System.Console.WriteLine("ioi_sentTime: " + ioi_sentTime);
-                    System.Console.WriteLine("change: " + change);
                 }
                 else
                 {
@@ -481,9 +477,7 @@ namespace com.bloomberg.ioi.samples
             // Create the topic string for the ioi subscription.
             String ioiTopic = d_service + "/ioi";
 
-            ioiSubscriptionID = new CorrelationID();
-
-            ioiSubscription = new Subscription(ioiTopic, ioiSubscriptionID);
+            ioiSubscription = new Subscription(ioiTopic);
             System.Console.WriteLine("IOI Topic: " + ioiTopic);
             List<Subscription> subscriptions = new List<Subscription>();
             subscriptions.Add(ioiSubscription);
