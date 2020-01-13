@@ -1,0 +1,824 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Created with Liquid XML 2016 Designer Edition 14.1.2.6578 (https://www.liquid-technologies.com) -->
+<!-- Copied from //blp/ioipub service version 1.0.0.0 on Mon Oct 16 2017 14:14:01 GMT-0400 (EDT). -->
+<ServiceDefinition xmlns="http://bloomberg.com/schemas/apidd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://bloomberg.com/schemas/apidd apidd.xsd"
+    name="blp.ioisub" version="1.0.0.0">
+    <service name="//blp/ioisub" version="1.0.0.0">
+        <event name="Ioidata" eventType="Ioidata">
+            <eventId>1</eventId>
+            <cacheable>true</cacheable>
+        </event>
+        <defaultServiceId>196728</defaultServiceId>
+        <publisherSupportsRecap>false</publisherSupportsRecap>
+        <authoritativeSourceSupportsRecap>false</authoritativeSourceSupportsRecap>
+        <SubscriberResolutionServiceId>196726</SubscriberResolutionServiceId>
+        <isInfrastructureService>false</isInfrastructureService>
+        <isMetered>false</isMetered>
+        <appendMtrId>false</appendMtrId>
+    </service>
+    <schema>
+        <sequenceType name="Ioidata">
+            <description></description>
+            <element name="ioi_instrument_type" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_count" type="Int32"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_strike"
+                type="Float64" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_expiry"
+                type="Datetime" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_type" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_ratio" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_underlying_type"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_underlying_ticker"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_underlying_figi"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_exchange"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_style" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_futureRefDate"
+                type="Datetime" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_delta" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_listed_type" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_listed_ticker" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_0_listed_figi" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_strike"
+                type="Float64" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_expiry"
+                type="Datetime" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_type" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_ratio" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_underlying_type"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_underlying_ticker"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_underlying_figi"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_exchange"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_style" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_futureRefDate"
+                type="Datetime" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_delta" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_listed_type" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_listed_ticker" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_1_listed_figi" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_strike"
+                type="Float64" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_expiry"
+                type="Datetime" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_type" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_ratio" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_underlying_type"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_underlying_ticker"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_underlying_figi"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_exchange"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_style" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_futureRefDate"
+                type="Datetime" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_delta" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_listed_type" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_listed_ticker" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_2_listed_figi" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_strike"
+                type="Float64" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_expiry"
+                type="Datetime" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_type" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_ratio" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_underlying_type"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_underlying_ticker"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_underlying_figi"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_exchange"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_style" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_futureRefDate"
+                type="Datetime" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_delta" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_listed_type" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_listed_ticker" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_legs_3_listed_figi" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_option_structure" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_stock_security_type"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_stock_security_ticker"
+                type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_instrument_stock_security_figi" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_goodUntil" type="Datetime" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_price_type" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_price_fixed_price" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_price_fixed_currency" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_price_pegged_offsetAmount" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_price_pegged_offsetFrom" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_price_pegged_limitPrice" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_price_pegged_offsetType" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_price_reference" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_size_type" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_size_quantity" type="Int64" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_size_quality" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_referencePrice_price" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_referencePrice_currency" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_volatility" type="Float64" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_notes" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_count" type="Int32"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_0" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_1" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_2" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_3" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_4" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_5" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_6" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_7" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_8" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_9" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_qualifiers_10" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_bid_natural" type="Int32" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_price_type" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_price_fixed_price" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_price_fixed_currency" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_price_pegged_offsetAmount"
+                type="Float64" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_price_pegged_offsetFrom" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_price_pegged_limitPrice" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_price_pegged_offsetType" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_price_reference" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_size_type" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_size_quantity" type="Int64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_size_quality" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_referencePrice_price" type="Float64"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_referencePrice_currency" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_volatility" type="Float64" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_notes" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_count" type="Int32"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_0" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_1" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_2" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_3" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_4" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_5" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_6" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_7" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_8" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_9" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_qualifiers_10" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_offer_natural" type="Int32" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_routing_strategy_id" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_routing_strategy_brief" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_routing_strategy_detailed" type="String"
+                minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_routing_id" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_routing_broker" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_routing_orderType" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_sentTime" type="Datetime" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi_id" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="state" type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="id_value" type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="originalId_value" type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="trader_uuid" type="Int64" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="trader_acronym" type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="trader_username" type="String" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="receivedTime" type="Datetime" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+    </schema>
+</ServiceDefinition>

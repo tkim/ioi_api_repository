@@ -1,0 +1,1104 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Created with Liquid XML 2016 Designer Edition 14.1.2.6578 (https://www.liquid-technologies.com) -->
+<!-- Copied from //blp/ioiapi-beta-request service version 1.0.0.2 on Tue Jul 11 2017 09:52:37 GMT-0400 (EDT). -->
+<ServiceDefinition xmlns="http://bloomberg.com/schemas/apidd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://bloomberg.com/schemas/apidd apidd.xsd"
+    name="blp.ioiapi-request" version="1.0.0.0">
+    <service name="//blp/ioiapi-request" version="1.0.0.0"
+        authorizationService="//blp/apiauth">
+        <operation name="createIoi" serviceId="196723">
+            <request>request</request>
+            <requestSelection>createIoi</requestSelection>
+            <response>response</response>
+            <responseSelection>exception</responseSelection>
+            <responseSelection>handle</responseSelection>
+        </operation>
+        <operation name="updateIoi" serviceId="196723">
+            <request>request</request>
+            <requestSelection>updateIoi</requestSelection>
+            <response>response</response>
+            <responseSelection>exception</responseSelection>
+            <responseSelection>handle</responseSelection>
+        </operation>
+        <operation name="cancelIoi" serviceId="196723">
+            <request>request</request>
+            <requestSelection>cancelIoi</requestSelection>
+            <response>response</response>
+            <responseSelection>exception</responseSelection>
+            <responseSelection>handle</responseSelection>
+        </operation>
+        <operation name="createAdv" serviceId="196723">
+            <request>request</request>
+            <requestSelection>createAdv</requestSelection>
+            <response>response</response>
+            <responseSelection>exception</responseSelection>
+            <responseSelection>handle</responseSelection>
+        </operation>
+        <operation name="convertIoiToAdv" serviceId="196723">
+            <request>request</request>
+            <requestSelection>convertIoiToAdv</requestSelection>
+            <response>response</response>
+            <responseSelection>exception</responseSelection>
+            <responseSelection>handle</responseSelection>
+        </operation>
+        <defaultServiceId>196723</defaultServiceId>
+        <resolutionService></resolutionService>
+        <publisherSupportsRecap>false</publisherSupportsRecap>
+        <authoritativeSourceSupportsRecap>false</authoritativeSourceSupportsRecap>
+        <isInfrastructureService>false</isInfrastructureService>
+        <isMetered>false</isMetered>
+        <appendMtrId>false</appendMtrId>
+    </service>
+    <schema>
+        <sequenceType name="CreateIoi">
+            <description>seqCreateIoi</description>
+            <element name="ioi" type="Ioi">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="Ioi">
+            <description>seqIoi</description>
+            <element name="instrument" type="Instrument" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="goodUntil" type="Datetime" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="targets" type="TargetList" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="bid" type="IoiQuote" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="offer" type="IoiQuote" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="routing" type="Routable" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="sentTime" type="Datetime" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="Option">
+            <description>seqOption</description>
+            <element name="legs" type="OptionLeg" maxOccurs="unbounded">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="structure" type="OptionStructure">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="OptionLeg">
+            <description>seqOptionLeg</description>
+            <element name="strike" type="Float64">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="expiry" type="Datetime">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="type" type="OptionType">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ratio" type="Float64">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="underlying" type="SecurityId">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="exchange" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="style" type="OptionStyle">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="futureRefDate" type="Datetime" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="delta" type="Float64" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="listed" type="SecurityId" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="Stock">
+            <description>seqStock</description>
+            <element name="security" type="SecurityId">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="TargetList">
+            <description>seqTargetList</description>
+            <element name="includes" type="Target" maxOccurs="unbounded">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="excludes" type="Target" maxOccurs="unbounded">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="IoiQuote">
+            <description>seqIoiQuote</description>
+            <element name="price" type="IoiPrice" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="size" type="IoiSize" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="referencePrice" type="FixedPrice" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="volatility" type="Float64" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="notes" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="qualifiers" type="String" maxOccurs="unbounded">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="natural" type="Boolean" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="FixedPrice">
+            <description>seqFixedPrice</description>
+            <element name="price" type="Float64">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="currency" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="PeggedPrice">
+            <description>seqPeggedPrice</description>
+            <element name="offsetAmount" type="Float64">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="offsetFrom" type="MarketPriceReference">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="limitPrice" type="Float64" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="Routable">
+            <description>seqRoutable</description>
+            <element name="strategy" type="Strategy" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="customId" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="broker" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="Strategy">
+            <description>seqStrategy</description>
+            <element name="name" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="brief" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="detailed" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="CancelIoi">
+            <description>seqCancelIoi</description>
+            <element name="handle" type="Handle">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="Handle">
+            <description>seqHandle</description>
+            <element name="value" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="UpdateIoi">
+            <description>seqUpdateIoi</description>
+            <element name="handle" type="Handle">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi" type="Ioi">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="ConvertIoiToAdv">
+            <description>seqConvertIoiToAdv</description>
+            <element name="handle" type="Handle">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="quantity" type="Int64">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="side" type="AdvSide">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="GetIoi">
+            <description>seqGetIoi</description>
+            <element name="handle" type="Handle">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="CreateAdv">
+            <description>seqCreateAdv</description>
+            <element name="advertisement" type="Advertisement">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="Advertisement">
+            <description>seqAdvertisement</description>
+            <element name="side" type="AdvSide">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="quantity" type="Int64">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="isHighTouch" type="Boolean">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="instrument" type="Instrument">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="tradeDate" type="Datetime" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="Null">
+            <description>seqNull</description>
+        </sequenceType>
+        <sequenceType name="LookupIoi">
+            <description>seqLookupIoi</description>
+            <element name="handle" type="Handle" minOccurs="0" maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="underlying" type="SecurityId" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="olderThan" type="Datetime" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="newerThan" type="Datetime" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="state" type="IoiState" maxOccurs="unbounded">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="Exception">
+            <description>seqException</description>
+            <element name="what" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="Metadata">
+            <description>seqMetadata</description>
+            <element name="optionPrototype" type="OptionPrototype"
+                maxOccurs="unbounded">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="OptionPrototype">
+            <description>seqOptionPrototype</description>
+            <element name="option" type="Option">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="description" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="shortName" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="longName" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="IoiMsgInternal">
+            <description>seqIoiMsgInternal</description>
+            <element name="ioi" type="Ioi">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="source" type="IoiSource">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="received" type="Datetime">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="id" type="Handle">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="originalId" type="Handle">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="trader" type="IoiTrader">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="state" type="IoiState">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="targetId" type="Handle" maxOccurs="unbounded">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="summary" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="underlying" type="SecurityId">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="FIXSource">
+            <description>seqFIXSource</description>
+            <element name="session" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="host" type="Int32">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="bureau" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="ApiSource">
+            <description>seqApiSource</description>
+            <element name="correlationId" type="Int32">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="MIOISource">
+            <description>seqMIOISource</description>
+            <element name="host" type="Int32">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="IBSource">
+            <description>seqIBSource</description>
+            <element name="roomId" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="msgId" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="MSGSource">
+            <description>seqMSGSource</description>
+            <element name="msgId" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="IoiTrader">
+            <description>seqIoiTrader</description>
+            <element name="uuid" type="Int32">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="acronym" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="username" type="String" minOccurs="0"
+                maxOccurs="1">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <sequenceType name="IoiMsgExternal">
+            <description>seqIoiMsgExternal</description>
+            <element name="ioi" type="Ioi">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="change" type="IoiState">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="id" type="Handle">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="originalId" type="Handle">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </sequenceType>
+        <choiceType name="request">
+            <description>choicerequest</description>
+            <element name="createIoi" type="CreateIoi">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="cancelIoi" type="CancelIoi">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="updateIoi" type="UpdateIoi">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="convertIoiToAdv" type="ConvertIoiToAdv">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="getIoi" type="GetIoi">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="createAdv" type="CreateAdv">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="getMetadata" type="Null">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="getTargetHandle" type="TargetList">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="lookupIoi" type="LookupIoi">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </choiceType>
+        <choiceType name="Instrument">
+            <description>choiceInstrument</description>
+            <element name="option" type="Option">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="stock" type="Stock">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </choiceType>
+        <choiceType name="SecurityId">
+            <description>choiceSecurityId</description>
+            <element name="ticker" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="figi" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </choiceType>
+        <choiceType name="Target">
+            <description>choiceTarget</description>
+            <element name="uuid" type="Int32">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="acronym" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="listId" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </choiceType>
+        <choiceType name="IoiPrice">
+            <description>choiceIoiPrice</description>
+            <element name="fixed" type="FixedPrice">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="pegged" type="PeggedPrice">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="reference" type="String">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="moneyness" type="Float64">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </choiceType>
+        <choiceType name="IoiSize">
+            <description>choiceIoiSize</description>
+            <element name="quantity" type="Int64">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="quality" type="SizeQualifier">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </choiceType>
+        <choiceType name="response">
+            <description>choiceresponse</description>
+            <element name="exception" type="Exception">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="handle" type="Handle">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioi" type="Ioi">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="metadata" type="Metadata">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="collection" type="Collection">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </choiceType>
+        <choiceType name="Collection">
+            <description>choiceCollection</description>
+            <element name="ioiMsgInternal" type="IoiMsgInternal"
+                maxOccurs="unbounded">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="handle" type="Handle" maxOccurs="unbounded">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ioiMsgExternal" type="IoiMsgExternal"
+                maxOccurs="unbounded">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </choiceType>
+        <choiceType name="IoiSource">
+            <description>choiceIoiSource</description>
+            <element name="fix" type="FIXSource">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="api" type="ApiSource">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="mioi" type="MIOISource">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="ib" type="IBSource">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+            <element name="msg" type="MSGSource">
+                <description></description>
+                <cacheable>true</cacheable>
+                <cachedOnlyOnInitialPaint>false</cachedOnlyOnInitialPaint>
+            </element>
+        </choiceType>
+        <enumerationType name="OptionType" type="String">
+            <description></description>
+            <enumerator name="Call">
+                <description></description>
+                <value>
+                    <String>Call</String>
+                </value>
+            </enumerator>
+            <enumerator name="Put">
+                <description></description>
+                <value>
+                    <String>Put</String>
+                </value>
+            </enumerator>
+        </enumerationType>
+        <enumerationType name="OptionStyle" type="String">
+            <description></description>
+            <enumerator name="European">
+                <description></description>
+                <value>
+                    <String>European</String>
+                </value>
+            </enumerator>
+            <enumerator name="American">
+                <description></description>
+                <value>
+                    <String>American</String>
+                </value>
+            </enumerator>
+        </enumerationType>
+        <enumerationType name="OptionStructure" type="String">
+            <description></description>
+            <enumerator name="Custom">
+                <description></description>
+                <value>
+                    <String>Custom</String>
+                </value>
+            </enumerator>
+            <enumerator name="CallSpread">
+                <description></description>
+                <value>
+                    <String>CallSpread</String>
+                </value>
+            </enumerator>
+            <enumerator name="PutSpread">
+                <description></description>
+                <value>
+                    <String>PutSpread</String>
+                </value>
+            </enumerator>
+            <enumerator name="Straddle">
+                <description></description>
+                <value>
+                    <String>Straddle</String>
+                </value>
+            </enumerator>
+            <enumerator name="Strangle">
+                <description></description>
+                <value>
+                    <String>Strangle</String>
+                </value>
+            </enumerator>
+            <enumerator name="SingleLegCall">
+                <description></description>
+                <value>
+                    <String>SingleLegCall</String>
+                </value>
+            </enumerator>
+            <enumerator name="SingleLegPut">
+                <description></description>
+                <value>
+                    <String>SingleLegPut</String>
+                </value>
+            </enumerator>
+            <enumerator name="CalendarCallSpread">
+                <description></description>
+                <value>
+                    <String>CalendarCallSpread</String>
+                </value>
+            </enumerator>
+            <enumerator name="CalendarPutSpread">
+                <description></description>
+                <value>
+                    <String>CalendarPutSpread</String>
+                </value>
+            </enumerator>
+            <enumerator name="CallSpreadReversal">
+                <description></description>
+                <value>
+                    <String>CallSpreadReversal</String>
+                </value>
+            </enumerator>
+            <enumerator name="PutSpreadReversal">
+                <description></description>
+                <value>
+                    <String>PutSpreadReversal</String>
+                </value>
+            </enumerator>
+            <enumerator name="DiagonalCalendarCallSpread">
+                <description></description>
+                <value>
+                    <String>DiagonalCalendarCallSpread</String>
+                </value>
+            </enumerator>
+            <enumerator name="DiagonalCalendarPutSpread">
+                <description></description>
+                <value>
+                    <String>DiagonalCalendarPutSpread</String>
+                </value>
+            </enumerator>
+            <enumerator name="CallButterfly">
+                <description></description>
+                <value>
+                    <String>CallButterfly</String>
+                </value>
+            </enumerator>
+            <enumerator name="PutButterfly">
+                <description></description>
+                <value>
+                    <String>PutButterfly</String>
+                </value>
+            </enumerator>
+            <enumerator name="IronButterfly">
+                <description></description>
+                <value>
+                    <String>IronButterfly</String>
+                </value>
+            </enumerator>
+            <enumerator name="RiskReversal">
+                <description></description>
+                <value>
+                    <String>RiskReversal</String>
+                </value>
+            </enumerator>
+            <enumerator name="Box">
+                <description></description>
+                <value>
+                    <String>Box</String>
+                </value>
+            </enumerator>
+            <enumerator name="CallLadder">
+                <description></description>
+                <value>
+                    <String>CallLadder</String>
+                </value>
+            </enumerator>
+            <enumerator name="PutLadder">
+                <description></description>
+                <value>
+                    <String>PutLadder</String>
+                </value>
+            </enumerator>
+            <enumerator name="CallCondor">
+                <description></description>
+                <value>
+                    <String>CallCondor</String>
+                </value>
+            </enumerator>
+            <enumerator name="PutCondor">
+                <description></description>
+                <value>
+                    <String>PutCondor</String>
+                </value>
+            </enumerator>
+            <enumerator name="IronCondor">
+                <description></description>
+                <value>
+                    <String>IronCondor</String>
+                </value>
+            </enumerator>
+            <enumerator name="JellyRoll">
+                <description></description>
+                <value>
+                    <String>JellyRoll</String>
+                </value>
+            </enumerator>
+            <enumerator name="RatioCallSpread">
+                <description></description>
+                <value>
+                    <String>RatioCallSpread</String>
+                </value>
+            </enumerator>
+            <enumerator name="RatioPutSpread">
+                <description></description>
+                <value>
+                    <String>RatioPutSpread</String>
+                </value>
+            </enumerator>
+        </enumerationType>
+        <enumerationType name="MarketPriceReference" type="String">
+            <description></description>
+            <enumerator name="BID">
+                <description></description>
+                <value>
+                    <String>BID</String>
+                </value>
+            </enumerator>
+            <enumerator name="MID">
+                <description></description>
+                <value>
+                    <String>MID</String>
+                </value>
+            </enumerator>
+            <enumerator name="ASK">
+                <description></description>
+                <value>
+                    <String>ASK</String>
+                </value>
+            </enumerator>
+        </enumerationType>
+        <enumerationType name="SizeQualifier" type="String">
+            <description></description>
+            <enumerator name="Small">
+                <description></description>
+                <value>
+                    <String>Small</String>
+                </value>
+            </enumerator>
+            <enumerator name="Medium">
+                <description></description>
+                <value>
+                    <String>Medium</String>
+                </value>
+            </enumerator>
+            <enumerator name="Large">
+                <description></description>
+                <value>
+                    <String>Large</String>
+                </value>
+            </enumerator>
+        </enumerationType>
+        <enumerationType name="AdvSide" type="String">
+            <description></description>
+            <enumerator name="Bought">
+                <description></description>
+                <value>
+                    <String>Bought</String>
+                </value>
+            </enumerator>
+            <enumerator name="Sold">
+                <description></description>
+                <value>
+                    <String>Sold</String>
+                </value>
+            </enumerator>
+            <enumerator name="Traded">
+                <description></description>
+                <value>
+                    <String>Traded</String>
+                </value>
+            </enumerator>
+            <enumerator name="Crossed">
+                <description></description>
+                <value>
+                    <String>Crossed</String>
+                </value>
+            </enumerator>
+        </enumerationType>
+        <enumerationType name="IoiState" type="String">
+            <description></description>
+            <enumerator name="New">
+                <description></description>
+                <value>
+                    <String>New</String>
+                </value>
+            </enumerator>
+            <enumerator name="Replace">
+                <description></description>
+                <value>
+                    <String>Replace</String>
+                </value>
+            </enumerator>
+            <enumerator name="Cancel">
+                <description></description>
+                <value>
+                    <String>Cancel</String>
+                </value>
+            </enumerator>
+        </enumerationType>
+    </schema>
+</ServiceDefinition>
