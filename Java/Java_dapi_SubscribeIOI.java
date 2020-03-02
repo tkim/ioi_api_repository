@@ -459,7 +459,6 @@ public class Java_dapi_SubscribeIOI {
         	System.out.println("Create IOI subscription");
 
         	String ioiTopic = d_service + "/ioi";
-        	//String ioiTopic = d_service + "/ioi?uuid=8049857";
     		
 
         	ioiSubscription = new Subscription(ioiTopic);
